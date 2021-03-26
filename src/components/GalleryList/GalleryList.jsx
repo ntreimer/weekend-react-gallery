@@ -5,10 +5,10 @@ import GalleryItem from '../GalleryItem/GalleryItem'
 function GalleryList(props) {
     return (
         <>
-            <p>I'm the gallery List!</p>
-            <ul>
-                <GalleryItem />
-            </ul>
+            <p>Your photos:</p>
+            <div>
+                {props.images.map( (image, index) =>(<GalleryItem image={image} key={index}/>) ) }
+            </div>
         </>
     );
 }
