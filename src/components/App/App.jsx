@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import GalleryList from '../GalleryList/GalleryList'
 
 function App() {
     return (
@@ -9,6 +10,7 @@ function App() {
         </header>
         <p>Gallery goes here</p>
         <img src="images/goat_small.jpg"/>
+        <GalleryList />
       </div>
     );
 }
