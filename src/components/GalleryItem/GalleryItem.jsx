@@ -3,7 +3,7 @@ import './GalleryItem.css'
 
 function GalleryItem() {
     return (
-        <li>I'm a gallery item!</li>
+        <li><img src="images/acting_stupid.jpg"/></li>
     );
 }
 
