@@ -19,7 +19,7 @@ function GalleryItem(props) {
             return props.image.description;
         }
         else {
-            return <img src={props.image.path} id={props.image.id} height="200px" width="200px"/>
+            return <img src={props.image.path} id={props.image.id} className="picture"/>
         }
     }
     const toggleDescription = () => {
@@ -34,10 +34,10 @@ function GalleryItem(props) {
     //     })
     // }
     return (
-        <div className="picture" height="200px" width="200px">
-            <div onClick={toggleDescription}>{displayDescription()}</div>
-            <p>Likes: {props.image.likes}</p>
-            <button type="button" id={props.image.id} onClick={likeAndUpdate}>Like</button>
+        <div className="post">
+            <div className="content" onClick={toggleDescription}>{displayDescription()}</div>
+            <p className="likes">Likes: {props.image.likes}</p>
+            <button type="button" className="like-"id={props.image.id} onClick={likeAndUpdate}>Like</button>
         </div>
     );
 }

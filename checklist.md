@@ -27,8 +27,8 @@
 - [x] images should show description instead on click
     - [x] conditional rendering
 - [x] display number of likes for each item and include a like button
-    - [ ] on like click, update number of likes (PUT)
-    - [ ] update gallery upon like
+    - [x] on like click, update number of likes (PUT)
+    - [x] update gallery upon like
 - [ ] 
 - [ ]
 

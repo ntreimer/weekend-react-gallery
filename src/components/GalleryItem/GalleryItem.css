@@ -1,4 +1,12 @@
-.picture {
+.post {
+    height: 200px; 
+    width: 200px;
+    word-wrap: break-word;
     float: left;
     margin: 10px;
+}
+
+.picture {
+    height: 150px;
+    width: 150px;
 }
