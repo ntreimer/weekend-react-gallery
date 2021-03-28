@@ -1,11 +1,20 @@
 import React from 'react';
 import './GalleryItem.css';
 import {useState} from 'react';
+import axios from 'axios';
 
 function GalleryItem(props) {
     const [showDescription, setShowDescription] = useState(false);
-    console.log(props.image);
-    let displayDescription = () => {
+    // const likePhoto = props.like;
+    const likePhoto = props.like;
+    const getGalleryList = props.get;
+    const likeAndUpdate = (target) => {
+        console.log('in likeandupdate');
+        likePhoto(target);
+        getGalleryList();
+    }
+    // console.log(likePhoto);
+    const displayDescription = () => {
         if(showDescription) {
             return props.image.description;
         }
@@ -13,14 +22,22 @@ function GalleryItem(props) {
             return <img src={props.image.path} id={props.image.id} height="200px" width="200px"/>
         }
     }
-    let toggleDescription = () => {
+    const toggleDescription = () => {
         setShowDescription(!showDescription);
     }
+    // const likePhoto = (event) => {
+    //     const id = event.target.id;
+    //     axios.put(`/gallery/like/${id}`).then((response) => {
+    //       console.log('back from /gallery PUT with:', response);
+    //     }).catch((err) => {
+    //       console.log('error:', err);
+    //     })
+    // }
     return (
         <div className="picture" height="200px" width="200px">
             <div onClick={toggleDescription}>{displayDescription()}</div>
             <p>Likes: {props.image.likes}</p>
-            <button type="button">Like</button>
+            <button type="button" id={props.image.id} onClick={likeAndUpdate}>Like</button>
         </div>
     );
 }

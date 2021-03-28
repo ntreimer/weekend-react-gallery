@@ -24,9 +24,9 @@
     - [x] iterate (map) the list of gallery data
     - [x] pass gallery to Items via props
 - [x] images should be same dimensions
-- [ ] images should show description instead on click
-    - [ ] conditional rendering
-- [ ] display number of likes for each item and include a like button
+- [x] images should show description instead on click
+    - [x] conditional rendering
+- [x] display number of likes for each item and include a like button
     - [ ] on like click, update number of likes (PUT)
     - [ ] update gallery upon like
 - [ ] 
